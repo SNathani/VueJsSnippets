@@ -1,0 +1,402 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold an index file for rollup entries</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vindex</Shortcut>
+            <Description>Code snippet to scaffold an index.js file contents</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript"
+                  Kind="file" Delimiter="^">
+                <![CDATA[
+  //Suggestion: File name should be index.js
+  //imports
+  import ClassName from './ClassName';
+  //import ClassName2 from './ClassName2';
+  
+  //exports
+   export  {
+    ClassName
+    //, ClassName2, ...
+ }
+ 
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold a mixin</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vmixin</Shortcut>
+            <Description>Code snippet to scaffold a mixin to be used in the component's mixins array</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the mixin for logging purposes</ToolTip>
+                    <Default>mixin1</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript"
+                  Kind="file" Delimiter="^">
+                <![CDATA[
+  //
+  //Mixin Name: ^name^
+  //
+  
+  //imports
+  
+  //exports
+  export default {
+    params: { 
+      context: Object,
+      name: {
+        type: string,
+        required: false,
+        default: null
+      }
+    },
+    data() {
+      let vm = this;
+
+      //public interface
+      return {
+        isBusy: false,
+        hasInitialized: false
+        //greeting: vm.Greeting
+        
+        //define common properties here ...
+      }
+    },
+    computed: {
+      /*
+      Greeting() {
+        return "Hello! " + this.Name;
+      },
+      */
+      
+      Name() {
+        let result = this.name;
+        if(this.context) {
+          result = this.context.name;
+        }
+        return result;
+      }
+      //TODO: Common computed properties goes here ...
+    },
+    methods: {
+      //TODO: Common methods goes here ...
+    },
+
+    //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
+    beforeCreate() {
+      this.isBusiy = true;
+      console.log("^name^.beforeCreate() ...");
+    },
+    created() {
+      console.log("^name^.created() ...");
+    },
+    beforeMount() {
+      console.log("^name^.beforeMount() ...");
+    },
+    mounted() {
+      this.hasInitialized = true;
+      console.log("^name^.mounted() ...");
+    },
+    beforeUpdate() {
+      console.log("^name^.beforeUpdate() ...");
+    },
+    updated() {
+      console.log("^name^.updated() ...");
+    },
+    activated() {
+      console.log("^name^.activated() ...");      
+    },
+    deactivated(){
+      console.log("^name^.deactivated() ...");
+    }
+
+  }
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold a class</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vmodel</Shortcut>
+            <Description>Code snippet to scaffold a model class</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the model class</ToolTip>
+                    <Default>ClassName</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript"
+                  Kind="file" Delimiter="^">
+                <![CDATA[
+  //
+  //Model Class Name: ^name^
+  //
+  
+  //imports
+  
+  //exports
+   export default class ^name^ {
+   constructor() {
+     //this.name = null;
+   }
+ }
+ 
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--FILTER-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Create a global filter</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vfilg</Shortcut>
+            <Description>Code snippet for a global filter</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the filter</ToolTip>
+                    <Default>my-filter</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        Vue.filter('^name^', function (value) {
+          if (!value) return '';
+          let result = value;
+          //TODO: transform value
+          //result = ^end^;
+          return result;
+        });
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--DIRECTIVE-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Create a global custom directive</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vdirg</Shortcut>
+            <Description>Code snippet for a global directive</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the directive</ToolTip>
+                    <Default>my-directive</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        Vue.directive('^name^', {
+          bind: function (el, binding, vnode, oldNode) {
+           //Called only once, when the directive is first bound to the element. 
+           //This is where you can do one-time setup work.
+           ^end^
+          },
+          inserted: function (el, binding, vnode, oldNode) {
+            //When the bound element is inserted into the DOM...
+            
+          },
+          componentUpdated: function(el, binding, vnode, oldNode) {
+            //Called after the containing component’s VNode and the VNodes of 
+            //its children have updated.
+            
+          },
+          updated: function(el, binding, vnode, oldNode) {
+            //Called after the containing component’s VNode has updated, but possibly before its children have updated. 
+            //The directive’s value may or may not have changed, 
+            // but you can skip unnecessary updates by comparing the binding’s 
+            // current and old values (see below on hook arguments).
+          
+          }
+        });
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--DIRECTIVE FN-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Create a global custom directive - function shorthand</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vdirgfn</Shortcut>
+            <Description>Code snippet for a global directive - function shorthand</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the directive</ToolTip>
+                    <Default>my-directive</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        Vue.directive('^name^', function(el, binding, vnode, oldNode) {
+            //TODO: Common functionality for bind and update hooks
+            ^end^
+        });
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold an instance method data</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vdata</Shortcut>
+            <Description>Code snippet for data method</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+
+    , data() {
+      let vm = this;
+
+      //public interface
+      return {
+        //define instance properties here ...
+      }
+    },^end^
+
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <!--FILTER-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Create a local filter</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vfil</Shortcut>
+            <Description>Code snippet for a local filter</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the filter</ToolTip>
+                    <Default>my-filter</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+      filters: {
+      ^name^: function (value) {
+        if (!value) return '';
+        let result = value;
+        //TODO: Transform value
+        //result = ^end^;
+        return result;
+      }
+     }
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <!--DIRECTIVE-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Create a local custom directive</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vdir</Shortcut>
+            <Description>Code snippet for a local directive</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the directive</ToolTip>
+                    <Default>my-directive</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[  
+    directives: {
+      ^name^: {
+            bind: function (el, binding, vnode, oldNode) {
+            //Called only once, when the directive is first bound to the element. 
+            //This is where you can do one-time setup work.
+            ^end^
+            },
+            inserted: function (el, binding, vnode, oldNode) {
+            //When the bound element is inserted into the DOM...
+            
+            },
+            componentUpdated: function(el, binding, vnode, oldNode) {
+            //Called after the containing component’s VNode and the VNodes of 
+            //its children have updated.
+            
+            },
+            updated: function(el, binding, vnode, oldNode) {
+            //Called after the containing component’s VNode has updated, but possibly before its children have updated. 
+            //The directive’s value may or may not have changed, 
+            // but you can skip unnecessary updates by comparing the binding’s 
+            // current and old values (see below on hook arguments).
+          
+            }    
+          }
+    }
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+</CodeSnippets>

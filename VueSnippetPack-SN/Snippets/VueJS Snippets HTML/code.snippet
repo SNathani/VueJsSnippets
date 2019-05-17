@@ -1,0 +1,335 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold SFC</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcomp</Shortcut>
+            <Description>Code snippet to scaffold a Single File Component (SFC)</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the component</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[
+            
+<template>
+  <div class="^name^">
+    {{context.name}}
+  </div>
+</template>
+
+<script>
+  //imports
+  //import mxin1 from '@/mixins/mixin1';
+  
+  //exports
+  export default {
+    name: '^name^',
+    //mixins:[mxin1],
+    params: { context: Object },
+    data() {
+      let vm = this;
+
+      //public interface
+      return {
+        isBusy: false
+        //define data() properties here ...
+      }
+    },
+    computed: {
+      //
+    },
+    methods: {
+      //
+    },
+    watch: {
+      isBusy(newVal, oldVal) {
+        //show or hide busy indicator
+      }
+    },
+
+    //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
+    beforeCreate() {
+      //
+    },
+    created() {
+      //
+    },
+    beforeMount() {
+      //
+    },
+    mounted() {
+      //
+    },
+    beforeUpdate() {
+      //
+    },
+    updated() {
+      /*
+      this.$nextTick(function () {
+        // Code that will run only after the
+        // entire view has been re-rendered
+      });
+      */
+    },
+    /*
+    activated() {
+      //
+    },
+    deactivated() {
+      //
+    },
+
+    beforeDestroy() {
+      //
+    },
+    destroyed() {
+      //
+    },
+    errorCaptured() {
+      console.log(...arguments);
+      return false;
+    }
+    */
+  }
+</script>
+
+<style scoped>
+  .^name^ {
+    display: block;
+  }
+</style>
+^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold a SFC script tag</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vscr</Shortcut>
+            <Description>Code snippet to scaffold a script tag for SFC</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the component</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[
+
+<script>
+  //imports
+  //import mxin1 from '@/mixins/mixin1';
+  
+  //exports
+  export default {
+    name: '^name^',
+    //mixins:[mxin1],
+    functional: false,
+    params: { context: Object },
+    data() {
+      let vm = this;
+
+      //public interface
+      return {
+        isBusy: false
+        //define data() properties here ...
+      }
+    },
+    computed: {
+      //
+    },
+    methods: {
+      //
+    },
+    watch: {
+      isBusy(newVal, oldVal) {
+        //show or hide busy indicator
+      }
+    },
+
+    //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
+    beforeCreate() {
+      //
+    },
+    created() {
+      //
+    },
+    beforeMount() {
+      //
+    },
+    mounted() {
+      //
+    },
+    beforeUpdate() {
+      //
+    },
+    updated() {
+      /*
+      this.$nextTick(function () {
+        // Code that will run only after the
+        // entire view has been re-rendered
+      });
+      */
+    },
+    /*
+    activated() {
+      //
+    },
+    deactivated() {
+      //
+    },
+
+    beforeDestroy() {
+      //
+    },
+    destroyed() {
+      //
+    },
+    errorCaptured() {
+      console.log(...arguments);
+      return false;
+    }
+    */
+  }
+</script>
+^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--STYLE-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold SFC style tag</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vstyle</Shortcut>
+            <Description>Code snippet to scaffold a style tag for SFC</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the component class</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[
+            
+<style scoped>
+  .^name^ {
+    display: block;
+  }
+</style>^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--TEMPLATE-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Scaffold a SFC template tag</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vtemp</Shortcut>
+            <Description>Code snippet to scaffold a template tag</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the component class</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[           
+<template>
+  <div class="^name^">
+^end^  
+  </div>
+</template>
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <!--SLOT-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>Slot tag</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vslot</Shortcut>
+            <Description>Code snippet for slot tag</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the slot</ToolTip>
+                    <Default>my-slot</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[           
+  <slot class="^name^">
+    ^end^  
+  </slot>
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+
+    <!--v-for-->
+    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <Header>
+            <Title>v-for expansion</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vfor</Shortcut>
+            <Description>Snippet to expand v-for</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="HTML" Kind="any" Delimiter="^">
+                <![CDATA[           
+v-for="(item,index) in items" :key="index"
+            ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+</CodeSnippets>
