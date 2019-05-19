@@ -24,6 +24,16 @@
 
 <tr>
 
+<td colspan="2">
+
+##### HTML
+
+</td>
+
+</tr>
+
+<tr>
+
 <td>vcomp</td>
 
 <td>Code snippet to scaffold a Single File Component (SFC)</td>
@@ -80,9 +90,35 @@
 
 <tr>
 
+<td colspan="2">
+
+##### JavaScript
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>vcomponent</td>
+
+<td>Code snippet to scaffold component script</td>
+
+</tr>
+
+<tr>
+
 <td>vmixin</td>
 
 <td>Code template for a Vue.js mixin to be included in a component mixins property</td>
+
+</tr>
+
+<tr>
+
+<td>vlch</td>
+
+<td>Vue component life-cycle hooks</td>
 
 </tr>
 
@@ -147,6 +183,112 @@
 <td>vdata</td>
 
 <td>Data method of a component</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2">
+
+##### JavaScript <small>[Release 1.0.1]</small>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>vprops</td>
+
+<td>Code snippet for props property</td>
+
+</tr>
+
+<tr>
+
+<td>vprop</td>
+
+<td>Code snippet for props property declaration</td>
+
+</tr>
+
+<tr>
+
+<td>vpropfull</td>
+
+<td>Code snippet for props property full declaration with validation</td>
+
+</tr>
+
+<tr>
+
+<td>vc</td>
+
+<td>Code snippet for computed property</td>
+
+</tr>
+
+<tr>
+
+<td>vcfull</td>
+
+<td>Code snippet for a computed property with getter and setter</td>
+
+</tr>
+
+<tr>
+
+<td>vw</td>
+
+<td>Code snippet for watch property</td>
+
+</tr>
+
+<tr>
+
+<td>vwm</td>
+
+<td>Code snippet for watch method</td>
+
+</tr>
+
+<tr>
+
+<td>vrf</td>
+
+<td>Render function for a functional component</td>
+
+</tr>
+
+<tr>
+
+<td>vmain</td>
+
+<td>Application initialization snippet - Vue CLI</td>
+
+</tr>
+
+<tr>
+
+<td>veventbus</td>
+
+<td>Code snippet for EventBus</td>
+
+</tr>
+
+<tr>
+
+<td>vstore</td>
+
+<td>Script implementing store pattern</td>
+
+</tr>
+
+<tr>
+
+<td>vautoreg</td>
+
+<td>Script for registering all components in /components globally with Vue.</td>
 
 </tr>
 
