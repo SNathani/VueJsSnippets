@@ -1,5 +1,7 @@
-﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+﻿<CodeSnippets >
+
+
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Scaffold an index file for rollup entries</Title>
             <Author>Sridhar Nathani</Author>
@@ -29,7 +31,7 @@
         </Snippet>
     </CodeSnippet>
 
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Scaffold a mixin</Title>
             <Author>Sridhar Nathani</Author>
@@ -58,13 +60,10 @@
   
   //exports
   export default {
-    params: { 
-      context: Object,
-      name: {
-        type: string,
-        required: false,
-        default: null
-      }
+    props: { 
+        context: Object
+      //TODO: declare common props
+      ^end^
     },
     data() {
       let vm = this;
@@ -73,34 +72,22 @@
       return {
         isBusy: false,
         hasInitialized: false
-        //greeting: vm.Greeting
         
         //define common properties here ...
       }
     },
     computed: {
-      /*
-      Greeting() {
-        return "Hello! " + this.Name;
-      },
-      */
-      
-      Name() {
-        let result = this.name;
-        if(this.context) {
-          result = this.context.name;
-        }
-        return result;
-      }
       //TODO: Common computed properties goes here ...
     },
     methods: {
       //TODO: Common methods goes here ...
-    },
-
+    }
+    
+    /*
+     , 
     //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
     beforeCreate() {
-      this.isBusiy = true;
+      this.isBusy = true;
       console.log("^name^.beforeCreate() ...");
     },
     created() {
@@ -125,14 +112,14 @@
     deactivated(){
       console.log("^name^.deactivated() ...");
     }
-
+    */
   }
 ]]>
             </Code>
         </Snippet>
     </CodeSnippet>
 
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0">
         <Header>
             <Title>Scaffold a class</Title>
             <Author>Sridhar Nathani</Author>
@@ -172,7 +159,7 @@
     </CodeSnippet>
 
     <!--FILTER-->
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Create a global filter</Title>
             <Author>Sridhar Nathani</Author>
@@ -205,7 +192,7 @@
     </CodeSnippet>
 
     <!--DIRECTIVE-->
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Create a global custom directive</Title>
             <Author>Sridhar Nathani</Author>
@@ -254,7 +241,7 @@
     </CodeSnippet>
 
     <!--DIRECTIVE FN-->
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Create a global custom directive - function shorthand</Title>
             <Author>Sridhar Nathani</Author>
@@ -283,7 +270,7 @@
         </Snippet>
     </CodeSnippet>
 
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Scaffold an instance method data</Title>
             <Author>Sridhar Nathani</Author>
@@ -313,7 +300,7 @@
 
 
     <!--FILTER-->
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Create a local filter</Title>
             <Author>Sridhar Nathani</Author>
@@ -349,7 +336,7 @@
 
 
     <!--DIRECTIVE-->
-    <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.1.0" >
         <Header>
             <Title>Create a local custom directive</Title>
             <Author>Sridhar Nathani</Author>
@@ -399,4 +386,605 @@
         </Snippet>
     </CodeSnippet>
 
+    <!--Version: 1.0.1-->
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>props property</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vprops</Shortcut>
+            <Description>Code snippet for props property</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the prop</ToolTip>
+                    <Default>context</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        props: { ^name^: Object },^end^]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Declare a props property</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vprop</Shortcut>
+            <Description>Code snippet for props property declaration</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the prop</ToolTip>
+                    <Default>context</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+                ^name^: Object ,
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Declare a props property with full definition</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vpropfull</Shortcut>
+            <Description>Code snippet for props property full declaration with validation</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the prop</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+ 
+              ^name^: {
+                type: String, //[String, Number]
+                required: true,
+                default: function() {
+                    return null;
+                },
+                validator: function(value) {
+                    return (value && value.length > 0);
+                }
+            },
+           ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Computed property full</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcfull</Shortcut>
+            <Description>Computed property with getter and setter members</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the prop</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        ^name^: {         
+            get() {
+                let result  = null; 
+                //TODO: update result
+                return result;
+            },
+            set(newVal) {
+                //TODO: Set property values by parsing newVal argument
+                ^end^
+            }
+          },]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Computed property</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vc</Shortcut>
+            <Description>Code snippet for computed property</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the computed property</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        computed: { 
+            ^name^() {
+                ^end^
+            }
+          },]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Watch property with a method</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vw</Shortcut>
+            <Description>Code snippet for watch property and a method</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the method</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        watch: { 
+            ^name^(newVal, oldVal) {
+                ^end^
+            }
+          },]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Watch method</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vwm</Shortcut>
+            <Description>Code snippet for watch method</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the method</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+            ^name^(newVal, oldVal) {
+                ^end^
+            },]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Render function - functional</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vrf</Shortcut>
+            <Description>Render function for functional a component</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the method</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+            render: function (createElement, context) {
+                        let el = createElement(/*TODO:*/);
+                        return el;
+                        ^end^
+                    } ,]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>EventBus pattern</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>veventbus</Shortcut>
+            <Description>Code snippet for EventBus</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the method</ToolTip>
+                    <Default>name</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+                //TODO: this goes into eventBus.js
+                
+                import Vue from "vue";
+
+                export const EventBus = new Vue();
+
+                /* Usage
+                import {EventBus} from "@/eventBus";
+                //raise event
+                EventBus.$emit("namespace.event", eventPayload, ...args);
+                //handle event
+                EventBus.$on("namespace.event", (x) => {});
+                */
+
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Main file for CLI project</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vmain</Shortcut>
+            <Description>Application initialization snippet - Vue CLI</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The id of the element to host vue application</ToolTip>
+                    <Default>app</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+                //TODO: this goes into main.js
+                
+                import Vue from "vue";
+                //import "./autoreg";
+                import App from "@/App.vue";
+
+                Vue.config.productionTip = false;
+
+                new Vue({
+                  render: h => h(App)
+                }).$mount("#^name^");
+                ^end^
+
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    
+    <!--Store Pattern-->
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Store pattern script</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vstore</Shortcut>
+            <Description>Script implementing store pattern</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+                //TODO: this goes into store.js anywhere you like
+                
+                export const store = {
+                      state: {
+                        todos: []
+                      },
+                      addTodo: function(todo) {
+                        this.state.todos.push(todo)
+                      }
+                    };
+                    
+                //Usage: place below code wherever you want to use the store
+                // import {store} from "@/store"; //store.js on the root directory
+                // ... in one of the methods
+                // store.addTodo(...);
+                //
+                  
+                ^end^
+
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Auto register components script</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vautoreg</Shortcut>
+            <Description>
+                Script for registering all components in /components/* globally with Vue.
+                Import this script file in main.js so that you don't have to import
+                each component while using it.
+            </Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>prefix</ID>
+                    <ToolTip>The prefix of the component files to register automatically</ToolTip>
+                    <Default>app</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[           
+        //TODO: this goes into autoreg.js where main.js resides
+        //Usage: import "./autoreg";     //in main.js file or in App.vue
+        
+        import Vue from "vue";
+        import upperFirst from "lodash/upperFirst";
+        import camelCase from "lodash/camelCase";
+
+
+        const requireComponent = require.context(
+          // The relative path of the components folder
+          "./components",
+          // Whether or not to look in subfolders
+          true,
+          // The regular expression used to match base component filenames
+          // Ther prefix could be your company abbreviation
+          /^prefix^[A-Z]\w+\.(vue|js)$/,
+        );
+
+        requireComponent.keys().forEach((fileName) => {
+
+          // Get component config
+          const componentConfig = requireComponent(fileName);
+
+          // Get PascalCase name of component
+          const componentName = upperFirst(
+            camelCase(
+              // Gets the file name regardless of folder depth
+              fileName
+              .split("/")
+              .pop()
+              .replace(/\.\w+$/, ""),
+            ),
+          );
+
+          //console.log('Registering component: ', componentName);
+
+          // Register component globally
+          Vue.component(
+            componentName,
+            // Look for the component options on `.default`, which will
+            // exist if the component was exported with `export default`,
+            // otherwise fall back to module's root.
+            componentConfig.default || componentConfig,
+          );
+        });
+
+                ^end^
+
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Scaffold SFC Script</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcomponent</Shortcut>
+            <Description>Code snippet to scaffold component script</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the component</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+            
+  //imports
+  //import mxin1 from '@/mixins/mixin1';
+  
+  //exports
+  export default {
+    name: '^name^',
+    //mixins:[mxin1],
+    props: { context: Object },
+    data() {
+      let vm = this;
+
+      //public interface
+      return {
+        isBusy: false
+        //define data() properties here ...
+        ^end^
+      }
+    },
+    computed: {
+      //
+    },
+    methods: {
+      //
+    },
+    watch: {
+      isBusy(newVal, oldVal) {
+        //show or hide busy indicator
+      }
+    },
+
+    //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
+    beforeCreate() {
+      //
+    },
+    created() {
+      //
+    },
+    beforeMount() {
+      //
+    },
+    mounted() {
+      //
+    },
+    beforeUpdate() {
+      //
+    },
+    updated() {
+      /*
+      this.$nextTick(function () {
+        // Code that will run only after the
+        // entire view has been re-rendered
+      });
+      */
+    },
+    /*
+    activated() {
+      //
+    },
+    deactivated() {
+      //
+    },
+
+    beforeDestroy() {
+      //
+    },
+    destroyed() {
+      //
+    },
+    errorCaptured() {
+      console.log(...arguments);
+      return false;
+    }
+    */
+  }
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vlch</Shortcut>
+            <Description>Vue component life-cycle hooks</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+            
+        //Life-cycle hooks  ---------- ---------- ---------- ---------- ----------
+        beforeCreate() {
+          //
+        },
+        created() {
+          //
+        },
+        beforeMount() {
+          //
+        },
+        mounted() {
+          //
+        },
+        beforeUpdate() {
+          //
+        },
+        updated() {
+          /*
+          this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been re-rendered
+          });
+          */^end^
+        },
+    
+        activated() {
+          //
+        },
+        deactivated() {
+          //
+        },
+
+        beforeDestroy() {
+          //
+        },
+        destroyed() {
+          //
+        },
+        errorCaptured() {
+          console.log(...arguments);
+          return false;
+        }
+   
+  
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
 </CodeSnippets>
