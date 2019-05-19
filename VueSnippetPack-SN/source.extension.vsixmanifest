@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="1e991a42-cf33-4bc0-a74e-d517fe2fe5dc" Version="1.0" Language="en-US" Publisher="Sridhar Nathani" />
+        <Identity Id="1e991a42-cf33-4bc0-a74e-d517fe2fe5dc" Version="1.0.1" Language="en-US" Publisher="Sridhar Nathani" />
         <DisplayName>Vue.js Code Snippets</DisplayName>
         <Description xml:space="preserve">Handy code snippets for Vue.js projects.</Description>
+        <MoreInfo>https://github.com/SNathani/VueJsSnippets/blob/master/README.md</MoreInfo>
         <GettingStartedGuide>Readme.html</GettingStartedGuide>
+        <ReleaseNotes>Release.md</ReleaseNotes>
         <Icon>logo.png</Icon>
-        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <PreviewImage>logo.png</PreviewImage>
         <Tags>snippets, vue, vuejs, vue.js, sridhar, nathani</Tags>
         <Preview>true</Preview>
     </Metadata>
     <Installation AllUsers="true">
         <!--Microsoft.VisualStudio.Pro includes all SKUs such as Community, Pro, Ultimate and Enterprise-->
-        <InstallationTarget Version="[15.0,16.1)" Id="Microsoft.VisualStudio.Pro" />
-        <InstallationTarget Version="[15.0,16.1)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Version="[15.0,16.5)" Id="Microsoft.VisualStudio.Pro" />
+        <InstallationTarget Version="[15.0,16.5)" Id="Microsoft.VisualStudio.Enterprise" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,16.5)" />
     </Installation>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0.28315.86,17.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,17.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Snippets\snippets-html.pkgdef" />
