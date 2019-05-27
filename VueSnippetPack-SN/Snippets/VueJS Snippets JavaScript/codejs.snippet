@@ -707,7 +707,7 @@
         </Snippet>
     </CodeSnippet>
 
-    
+
     <!--Store Pattern-->
     <CodeSnippet Format="1.1.0" >
         <Header>
@@ -984,6 +984,368 @@
    
   
 ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <!-- Version 1.0.2 -->
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vr</Shortcut>
+            <Description>component's render function</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+      render: function (createElement) {
+        return createElement(
+          'div',              // tag name
+          this.data,          // optional data
+          this.$slots.default // optional children array
+        )
+      },^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcel</Shortcut>
+            <Description>createElement definition - short form</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+         //return
+        createElement(
+          'div',
+          {
+            props:{},
+          },
+          
+          [/*child components*/ ]
+        )^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcelement</Shortcut>
+            <Description>createElement definition</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+         //return
+        createElement(
+          // {String | Object | Function}
+          // An HTML tag name, component options, or async
+          // function resolving to one of these. Required.
+          'div',
+
+          // {Object}
+          // A data object corresponding to the attributes
+          // you would use in a template. Optional.
+          {
+            //TODO: use the snippet vcelementdata
+          },
+          // {String | Array}
+          // Children VNodes, built using `createElement()`,
+          // or using strings to get 'text VNodes'. Optional.
+          [
+           // <!--'Some text comes first.',
+           // createElement('h1', 'A headline'),
+           // createElement(MyComponent, {
+           //   props: {
+           //     someProp: 'foobar'
+           //   }
+           // })-->
+          ]
+        )^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcelementdata</Shortcut>
+            <Description>Full definition of the data object parameter of createElement(.,/data/,.)</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+        {        
+          // Same API as `v-bind:class`, accepting either
+          // a string, object, or array of strings and objects.
+          class: {
+            foo: true,
+            bar: false
+          },
+          // Same API as `v-bind:style`, accepting either
+          // a string, object, or array of objects.
+          style: {
+            color: 'red',
+            fontSize: '14px'
+          },
+          // Normal HTML attributes
+          attrs: {
+            id: 'foo'
+          },
+          // Component props
+          props: {
+            myProp: 'bar'
+          },
+          // DOM properties
+          domProps: {
+            innerHTML: 'baz'
+          },
+          // Event handlers are nested under `on`, though
+          // modifiers such as in `v-on:keyup.enter` are not
+          // supported. You'll have to manually check the
+          // keyCode in the handler instead.
+          on: {
+            click: this.clickHandler
+          },
+          // For components only. Allows you to listen to
+          // native events, rather than events emitted from
+          // the component using `vm.$emit`.
+          nativeOn: {
+            click: this.nativeClickHandler
+          },
+          // Custom directives. Note that the `binding`'s
+          // `oldValue` cannot be set, as Vue keeps track
+          // of it for you.
+          directives: [
+            {
+              name: 'my-custom-directive',
+              value: '2',
+              expression: '1 + 1',
+              arg: 'foo',
+              modifiers: {
+                bar: true
+              }
+            }
+          ],
+          // Scoped slots in the form of
+          // { name: props => VNode | Array<VNode> }
+          scopedSlots: {
+            default: props => createElement('span', props.text)
+          },
+          // The name of the slot, if this component is the
+          // child of another component
+          slot: 'name-of-slot',
+          // Other special top-level properties
+          key: 'myKey',
+          ref: 'myRef',
+          // If you are applying the same ref name to multiple
+          // elements in the render function. This will make `$refs.myRef` become an
+          // array
+          refInFor: true
+        } ^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vfcg</Shortcut>
+            <Description>Code snippet to create a global functional component with render function</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the functional component</ToolTip>
+                    <Default>my-component</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+        Vue.component('^name^', {
+          functional: true,
+          props: {
+            //TODO: define properties
+          },
+          render: function (createElement, context) {
+            let el = 'div';
+
+            return createElement(
+              el,
+              context.data,
+              context.children
+            )
+          }
+        })^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>ve</Shortcut>
+            <Description>this.$emit(.,.)</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the event to emit</ToolTip>
+                    <Default>click</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+        this.$emit('^name^', /*payload*/);^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>von</Shortcut>
+            <Description>Event handler using this.$on(.,.)</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the event to emit</ToolTip>
+                    <Default>click</Default>
+                </Literal>
+                <Literal>
+                    <ID>callback</ID>
+                    <ToolTip>The name of the callback or function definition</ToolTip>
+                    <Default>callback</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+        this.$on('^name^', ^callback^);^end^
+]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vcmodel</Shortcut>
+            <Description>Model property of a component to override the behavior of v-model</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the property to handle</ToolTip>
+                    <Default>click</Default>
+                </Literal>
+                <Literal>
+                    <ID>event</ID>
+                    <ToolTip>The name of the event to override</ToolTip>
+                    <Default>click</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+            model: {
+                prop: '^name^',
+                event: '^event^'
+            },^end^
+  ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+
+    <CodeSnippet Format="1.1.0" >
+        <Header>
+            <Title>Life-cycle hooks</Title>
+            <Author>Sridhar Nathani</Author>
+            <Shortcut>vclisteners</Shortcut>
+            <Description>Computed listeners property to override listeners on a component</Description>
+            <SnippetTypes >
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>The name of the computed listerners property</ToolTip>
+                    <Default>click</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript" Kind="any" Delimiter="^">
+                <![CDATA[
+        ^name^Listeners() {
+              var vm = this;
+              // `Object.assign` merges objects together to form a new object
+              return Object.assign({},
+                // We add all the listeners from the parent
+                this.$listeners,
+                // Then we can add custom listeners or override the
+                // behavior of some listeners.
+                {
+                  // This ensures that the component works with v-model
+                  input: function (event) {
+                    vm.$emit('input', event.target.value)
+                  }
+                  //TODO: extend by adding other event handlers
+                }
+              );
+            },^end^
+  ]]>
             </Code>
         </Snippet>
     </CodeSnippet>

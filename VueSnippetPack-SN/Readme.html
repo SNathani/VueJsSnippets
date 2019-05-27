@@ -10,15 +10,32 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+
+    @media (min-width: 576px) {
+
+        .jumbotron {
+            padding: 1em 2em;
+        }
+    }
+
+    </style>
 </head>
 <body>
 
     <div class="container">
         <br />
         <div class="jumbotron">
-            <h2>
+            <h3>
                 Vue.js code snippets for Visual Studio 2017/2019
-            </h2>
+            </h3>
+            <small>
+                Supports all editions of Visual Studio. Please provide report issues. If you would like to have more snippets request request in Q &amp; A.
+            </small>
+        </div>
+        <div>
+
         </div>
         <table class="table table-bordered table-striped table-sm">
             <thead>
@@ -169,6 +186,53 @@
                 <tr>
                     <td>vautoreg</td>
                     <td>Script for registering all components in /components/* globally with Vue.</td>
+                </tr>
+
+                <!--JavaScript Release 1.0.2-->
+                <tr>
+                    <td colspan="2">
+                        <h5>JavaScript <small>[Release 1.0.2]</small></h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>vr</td>
+                    <td>component's render function</td>
+                </tr>
+                <tr>
+                    <td>vcel</td>
+                    <td>createElement definition - short form</td>
+                </tr>
+                <tr>
+                    <td>vcelement</td>
+                    <td>createElement definition - full form</td>
+                </tr>
+                <tr>
+                    <td>vcelementdata</td>
+                    <td>Full definition of the data object parameter of createElement(.,/data/,.)</td>
+                </tr>
+                <tr>
+                    <td>vfcg</td>
+                    <td>Code snippet to create a global functional component with render function</td>
+                </tr>
+
+                <tr>
+                    <td>ve</td>
+                    <td>this.$emit(.,.)</td>
+                </tr>
+
+                <tr>
+                    <td>von</td>
+                    <td>Event handler using this.$on(.,.)</td>
+                </tr>
+
+                <tr>
+                    <td>vcmodel</td>
+                    <td>Model property of a component to override the behavior of v-model</td>
+                </tr>
+
+                <tr>
+                    <td>vclisteners</td>
+                    <td>Computed listeners property to override listeners on a component</td>
                 </tr>
             </tbody>
         </table>
