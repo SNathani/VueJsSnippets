@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="1e991a42-cf33-4bc0-a74e-d517fe2fe5dc" Version="1.0.4" Language="en-US" Publisher="Sridhar Nathani" />
+        <Identity Id="BEAC0AB6-1CDD-4D63-AA1E-E2C76EEECF95" Version="1.0.4" Language="en-US" Publisher="Sridhar Nathani" />
         <DisplayName>Vue.js Code Snippets (2022)</DisplayName>
         <Description xml:space="preserve">Handy code snippets for Vue.js projects. Supports VS2022 versions of Community, Pro and Enterprise editions.</Description>
         <MoreInfo>https://github.com/SNathani/VueJsSnippets/blob/master/README.md</MoreInfo>
