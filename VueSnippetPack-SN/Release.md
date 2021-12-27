@@ -2,7 +2,7 @@
 
 <div class="jumbotron">
 
-### Vue.js code snippets for Visual Studio 2017/2019
+### Vue.js code snippets for Visual Studio 2022
 
 <small>Supports all editions of Visual Studio. Please provide report issues. If you would like to have more snippets request request in Q & A.</small></div>
 
