@@ -4,7 +4,7 @@
 
 ### Vue.js code snippets for Visual Studio 2022
 
-<small>Please report issues. If you would like to have more snippets request request in Q & A.</small></div>
+<small>Please report any issues. If you would like to have more snippets request in Q & A.</small></div>
 <p>
     <small>
         NOTE: Press CTRL(K + X) or "Edit>Intellisense>Insert Code Snippet" menu option, to invoke snippets for HTML
