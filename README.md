@@ -2,9 +2,9 @@
 
 <div class="jumbotron">
 
-## Vue.js code snippets for Visual Studio 2017/2019
+### Vue.js code snippets for Visual Studio 2022
 
-</div>
+<small>Supports all editions of Visual Studio. Please provide report issues. If you would like to have more snippets request request in Q & A.</small></div>
 
 <table class="table table-bordered table-striped table-sm">
 
@@ -288,7 +288,89 @@
 
 <td>vautoreg</td>
 
-<td>Script for registering all components in /components globally with Vue.</td>
+<td>Script for registering all components in /components/* globally with Vue.</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2">
+
+##### JavaScript <small>[Release 1.0.2]</small>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>vr</td>
+
+<td>component's render function</td>
+
+</tr>
+
+<tr>
+
+<td>vcel</td>
+
+<td>createElement definition - short form</td>
+
+</tr>
+
+<tr>
+
+<td>vcelement</td>
+
+<td>createElement definition - full form</td>
+
+</tr>
+
+<tr>
+
+<td>vcelementdata</td>
+
+<td>Full definition of the data object parameter of createElement(.,/data/,.)</td>
+
+</tr>
+
+<tr>
+
+<td>vfcg</td>
+
+<td>Code snippet to create a global functional component with render function</td>
+
+</tr>
+
+<tr>
+
+<td>ve</td>
+
+<td>this.$emit(.,.)</td>
+
+</tr>
+
+<tr>
+
+<td>von</td>
+
+<td>Event handler using this.$on(.,.)</td>
+
+</tr>
+
+<tr>
+
+<td>vcmodel</td>
+
+<td>Model property of a component to override the behavior of v-model</td>
+
+</tr>
+
+<tr>
+
+<td>vclisteners</td>
+
+<td>Computed listeners property to override listeners on a component</td>
 
 </tr>
 
