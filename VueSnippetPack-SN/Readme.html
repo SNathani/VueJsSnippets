@@ -13,12 +13,12 @@
 
     <style>
 
-    @media (min-width: 576px) {
+        @media (min-width: 576px) {
 
-        .jumbotron {
-            padding: 1em 2em;
+            .jumbotron {
+                padding: 1em 2em;
+            }
         }
-    }
 
     </style>
 </head>
@@ -31,11 +31,15 @@
                 Vue.js code snippets for Visual Studio 2022
             </h3>
             <small>
-                Supports all editions of Visual Studio. Please provide report issues. If you would like to have more snippets request request in Q &amp; A.
+                Please report issues. If you would like to have more snippets request in Q &amp; A.
             </small>
+            <p>
+                <small>
+                    NOTE: Press CTRL(K + X) or go to <em>Edit>Intellisense>Insert Snippet...</em> menu option, to invoke snippets for HTML
+                </small>
+            </p>
         </div>
         <div>
-
         </div>
         <table class="table table-bordered table-striped table-sm">
             <thead>
@@ -75,6 +79,14 @@
                 <tr>
                     <td>vfor</td>
                     <td>v-for directive code</td>
+                </tr>
+                <tr>
+                    <td>vrl</td>
+                    <td>router-link element</td>
+                </tr>
+                <tr>
+                    <td>vrv</td>
+                    <td>router-view element</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -234,9 +246,38 @@
                     <td>vclisteners</td>
                     <td>Computed listeners property to override listeners on a component</td>
                 </tr>
+                <!--JavaScript Release 1.0.5-->
+                <tr>
+                    <td colspan="2">
+                        <h5>JavaScript <small>[Release 1.0.5]</small></h5>
+                    </td>
+                </tr>
+                <tr><td>vri</td><td>Adds import for router</td></tr>
+                <tr><td>vroutes</td><td>Define routes</td></tr>
+                <tr><td>vrouter</td><td>Define router</td></tr>
+                <tr><td>vru</td><td>Use router - app.Use(router)</td></tr>
+                <tr><td>vrng</td><td>Router navigation guard</td></tr>
+                <tr><td>vrngauth</td><td>Router navigation guard snippet verifying whether user is authenticated</td></tr>
+                <tr><td>vrngauthasync</td><td>Router navigation guard snippet verifying whether user is authenticated using aysnc</td></tr>
+                <tr><td>vra</td><td>Add a route to the routes symbol</td></tr>
+                <tr><td>vran</td><td>Add a named route to the routes symbol</td></tr>
+                <tr><td>vrac</td><td>Add a route to the routes symbol with nested children</td></tr>
+                <tr><td>vrp</td><td>Navigate to route programatically</td></tr>
+                <tr><td>vrpo</td><td>Navigate to route programatically using path</td></tr>
+                <tr><td>vrpp</td><td>Navigate to route programatically using params</td></tr>
+                <tr><td>vrpq</td><td>Navigate to route programatically using a query</td></tr>
+                <tr><td>vrph</td><td>Navigate to route programatically using a hash</td></tr>
+                <tr><td>vrpget</td><td>Get route parameter inside a component</td></tr>
             </tbody>
         </table>
 
+        <h3>What's New</h3>
+        <ul>
+            <li>Release 1.0.5</li>
+            <ol>
+                <li>Vue Router snippets added</li>
+            </ol>
+        </ul>
     </div>
 
 </body>
