@@ -4,8 +4,12 @@
 
 ### Vue.js code snippets for Visual Studio 2022
 
-<small>Supports all editions of Visual Studio. Please provide report issues. If you would like to have more snippets request request in Q & A.</small></div>
-
+<small>Please report any issues. If you would like to have more snippets request in Q & A.</small></div>
+<p>
+    <small>
+        NOTE: Press CTRL(K + X) or "Edit>Intellisense>Insert Code Snippet" menu option, to invoke snippets for HTML
+    </small>
+</p>
 <table class="table table-bordered table-striped table-sm">
 
 <thead>
@@ -79,7 +83,14 @@
 <td>v-for directive code</td>
 
 </tr>
-
+                <tr>
+                    <td>vrl</td>
+                    <td>router-link element</td>
+                </tr>
+                <tr>
+                    <td>vrv</td>
+                    <td>router-view element</td>
+                </tr>
 <tr>
 
 <td> </td>
@@ -373,6 +384,32 @@
 <td>Computed listeners property to override listeners on a component</td>
 
 </tr>
+        <tr>
+
+<td colspan="2">
+
+##### JavaScript <small>[Release 1.0.5]</small>
+
+</td>
+
+</tr>
+<tr><td>vri</td><td>Adds import for router</td></tr>
+<tr><td>vroutes</td><td>Define routes</td></tr>
+<tr><td>vrouter</td><td>Define router</td></tr>
+<tr><td>vru</td><td>Use router - app.Use(router)</td></tr>
+<tr><td>vrng</td><td>Router navigation guard</td></tr>
+<tr><td>vrngauth</td><td>Router navigation guard snippet verifying whether user is authenticated</td></tr>
+<tr><td>vrngauthasync</td><td>Router navigation guard snippet verifying whether user is authenticated using aysnc</td></tr>
+<tr><td>vra</td><td>Add a route to the routes symbol</td></tr>
+<tr><td>vran</td><td>Add a named route to the routes symbol</td></tr>
+<tr><td>vrac</td><td>Add a route to the routes symbol with nested children</td></tr>
+<tr><td>vrp</td><td>Navigate to route programatically</td></tr>
+<tr><td>vrpo</td><td>Navigate to route programatically using path</td></tr>
+<tr><td>vrpp</td><td>Navigate to route programatically using params</td></tr>
+<tr><td>vrpq</td><td>Navigate to route programatically using a query</td></tr>
+<tr><td>vrph</td><td>Navigate to route programatically using a hash</td></tr>
+<tr><td>vrpget</td><td>Get route parameter inside a component</td></tr>
+
 
 </tbody>
 
