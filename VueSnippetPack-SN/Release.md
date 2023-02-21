@@ -403,11 +403,11 @@
 <tr><td>vra</td><td>Add a route to the routes symbol</td></tr>
 <tr><td>vran</td><td>Add a named route to the routes symbol</td></tr>
 <tr><td>vrac</td><td>Add a route to the routes symbol with nested children</td></tr>
-<tr><td>vrp</td><td>Navigate to route programatically</td></tr>
-<tr><td>vrpo</td><td>Navigate to route programatically using path</td></tr>
-<tr><td>vrpp</td><td>Navigate to route programatically using params</td></tr>
-<tr><td>vrpq</td><td>Navigate to route programatically using a query</td></tr>
-<tr><td>vrph</td><td>Navigate to route programatically using a hash</td></tr>
+<tr><td>vrp</td><td>Navigate to route programmatically</td></tr>
+<tr><td>vrpo</td><td>Navigate to route programmatically using path</td></tr>
+<tr><td>vrpp</td><td>Navigate to route programmatically using params</td></tr>
+<tr><td>vrpq</td><td>Navigate to route programmatically using a query</td></tr>
+<tr><td>vrph</td><td>Navigate to route programmatically using a hash</td></tr>
 <tr><td>vrpget</td><td>Get route parameter inside a component</td></tr>
 
 
